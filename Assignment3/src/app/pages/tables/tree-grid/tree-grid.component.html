@@ -1,0 +1,26 @@
+<nb-card>
+  <nb-card-header>
+    List Food For Today
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+    <div style="
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      direction: rtl;
+    ">
+      <div class="direction-ltr">{{total().fat + ' gram'}}</div>
+      <div class="direction-ltr">{{total().carbohydrate + ' gram'}}</div>
+
+      <div class="direction-ltr">{{total().protein + ' gram'}}</div>
+
+      <div class="direction-ltr">{{total().calo + ' gram'}}</div>
+
+      <div class="direction-ltr">Totals</div>
+
+    </div>
+  </nb-card-body>
+</nb-card>

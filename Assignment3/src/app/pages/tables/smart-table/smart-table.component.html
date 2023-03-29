@@ -1,0 +1,17 @@
+<nb-card>
+  <nb-card-header>
+    List Food
+  </nb-card-header>
+
+  <nb-card-body>
+    <button nbButton status="success" hero (click)="saveTodaysFood()" class="mb-5">
+      Add to today’s list
+    </button>
+    <ng2-smart-table [settings]="settings" [source]="source"
+      (userRowSelect)="userSelectRows($event.selected)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+<button nbButton status="success" hero (click)="saveTodaysFood()">
+  Add to today’s list
+</button>
